@@ -5,6 +5,7 @@
             "ESX.RegisterCommand({'clear', 'cls'}, 'user', function(xPlayer, args, showError)",
             "    xPlayer.triggerEvent('chat:clear')",
             "end, false, {help = _U('command_clear')})",
+            "-- https://docs.esx-framework.org/legacy/Server/functions/registercommand"
         ]
     },
     "PlayerLoaded": {
@@ -13,25 +14,29 @@
             "RegisterNetEvent('esx:playerLoaded')",
             "AddEventHandler('esx:playerLoaded', function(playerData)",
                 "$0",
-            "end)"
+            "end)",
+            "-- https://docs.esx-framework.org/legacy/Client/events/playerloaded"
         ]
     },
     "AdvancedNotification": {
         "prefix": "ESX:showAdvancedNotification event",
         "body": [
-            "TriggerClientEvent('esx:showAdvancedNotification', source, title, subject, msg, icon, iconType)"
+            "TriggerClientEvent('esx:showAdvancedNotification', source, title, subject, msg, icon, iconType)",
+            "-- https://docs.esx-framework.org/legacy/Client/events/showadvancednotification"
         ]
     },
     "showHelpNotification": {
         "prefix": "ESX:showHelpNotification event",
         "body": [
-            "TriggerClientEvent('esx:showHelpNotification', source, 'Hit ~INPUT_CONTEXT~ to do shit!')"
+            "TriggerClientEvent('esx:showHelpNotification', source, 'Hit ~INPUT_CONTEXT~ to do shit!')",
+            "-- https://docs.esx-framework.org/legacy/Client/events/showhelpnotification"
         ]
     },
     "showNotification": {
         "prefix": "ESX:showNotification event",
         "body": [
-            "TriggerClientEvent('esx:showNotification', source, 'Hello world!', type, time) -- all types can be find in the documentation: https://docs.esx-framework.org/legacy/Client/events/shownotification"
+            "TriggerClientEvent('esx:showNotification', source, 'Hello world!', type, time)",
+            "-- https://docs.esx-framework.org/legacy/Client/events/shownotification"
         ]
     },
     "GetPlayerData": {
@@ -55,20 +60,23 @@
     "AdvancedNotification2": {
         "prefix": "ESX:showAdvancedNotification function",
         "body": [
-            "ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex) -- all info can be found in the documentation: https://docs.esx-framework.org/legacy/Client/functions/showadvancednotification"
+            "ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)",
+            "-- https://docs.esx-framework.org/legacy/Client/functions/showadvancednotification"
         ]
     },
     "ShowFloatingHelpNotification": {
         "prefix": "ESX.ShowFloatingHelpNotification",
         "body": [
             "local coords = GetEntityCoords(PlayerPedId())",
-            "ESX.ShowFloatingHelpNotification('Your Notification', vector3(coords.x, coords.y, coords.z))"
+            "ESX.ShowFloatingHelpNotification('Your Notification', vector3(coords.x, coords.y, coords.z))",
+            "-- https://docs.esx-framework.org/legacy/Client/functions/showfloatinghelpnotification"
         ]
     },
     "ShowHelpNotification2": {
         "prefix": "ESX:showHelpNotification function",
         "body": [
-            "ESX.ShowHelpNotification('Hit ~INPUT_CONTEXT~ to do shit!')"
+            "ESX.ShowHelpNotification('Hit ~INPUT_CONTEXT~ to do shit!')",
+            "-- https://docs.esx-framework.org/legacy/Client/functions/showhelpnotification"
         ]
     },
     "ShowInventory": {
@@ -80,7 +88,8 @@
     "ShowNotification2": {
         "prefix": "ESX.ShowNotification",
         "body": [
-            "ESX.ShowNotification(msg, time, type) -- all information can be found in the documentation: https://docs.esx-framework.org/legacy/Client/functions/shownotification"
+            "ESX.ShowNotification(msg, time, type)",
+            "-- https://docs.esx-framework.org/legacy/Client/functions/shownotification"
         ]
     },
     "TriggerServerCallback": {
@@ -89,7 +98,8 @@
             "local data2 = 'data'",
             "ESX.TriggerServerCallback('esx:bestframework', function(data)",
             "   print(data)",
-            "end, data2)"
+            "end, data2)",
+            "-- https://docs.esx-framework.org/legacy/Client/functions/triggerservercallback"
         ]
     },
     "DeleteObj": {
@@ -427,19 +437,389 @@
     "Math.GroupDigits": {
         "prefix": "ESX.Math.GroupDigits",
         "body": [
-            "ESX.Math.GroupDigits(val)"
+            "ESX.Math.GroupDigits(val)",
+            "-- https://docs.esx-framework.org/legacy/Common/functions/groupdigits"
         ]
     },
     "Math.round": {
         "prefix": "ESX.Math.Round",
         "body": [
-            "ESX.Math.Round(val, numDecimals)"
+            "ESX.Math.Round(val, numDecimals)",
+            "-- https://docs.esx-framework.org/legacy/Common/functions/round"
         ]
     },
     "Math.Trim": {
         "prefix": "ESX.Math.Trim",
         "body": [
-            "ESX.Math.Trim(val)"
+            "ESX.Math.Trim(val)",
+            "-- https://docs.esx-framework.org/legacy/Common/functions/trim"
+        ]
+    },
+    "ClearTimeout": {
+        "prefix": "ESX.ClearTimeout",
+        "body": [
+            "ESX.ClearTimeout(id)"
+        ]
+    },
+    "CreatePickup": {
+        "prefix": "ESX.CreatePickup",
+        "body": [
+            "ESX.CreatePickup(type, name, count, label, playerId, components, tintIndex)"
+        ]
+    },
+    "DoesJobExist": {
+        "prefix": "ESX.DoesJobExist",
+        "body": [
+            "ESX.DoesJobExist(job, grade)"
+        ]
+    },
+    "GetExtendedPlayers": {
+        "prefix": "ESX.GetExtendedPlayers",
+        "body": [
+            "ESX.GetExtendedPlayers(key, val)"
+        ]
+    },
+    "GetItemLabel": {
+        "prefix": "ESX.GetItemLabel",
+        "body": [
+            "ESX.GetItemLabel(item)"
+        ]
+    },
+    "GetJobs": {
+        "prefix": "ESX.GetJobs",
+        "body": [
+            "ESX.GetJobs()"
+        ]
+    },
+    "GetPlayerFromId": {
+        "prefix": "ESX.GetPlayerFromId",
+        "body": [
+            "ESX.GetPlayerFromId(PlayerId)"
+        ]
+    },
+    "GetPlayerFromIdentifier": {
+        "prefix": "ESX.GetPlayerFromIdentifier",
+        "body": [
+            "ESX.GetPlayerFromIdentifier(identifier)"
+        ]
+    },
+    "GetPlayers sv": {
+        "prefix": "ESX.GetPlayers",
+        "body": [
+            "ESX.GetPlayers()"
+        ]
+    },
+    "RegisterServerCallback": {
+        "prefix": "ESX.RegisterServerCallback",
+        "body": [
+            "local myServer = 'my server'",
+            "ESX.RegisterServerCallback('esx:bestframework', function(src, cb, param1, param2)",
+            "   cb(server)",
+            "end)",
+            "-- https://docs.esx-framework.org/legacy/Server/functions/registerservercallback"
+        ]
+    },
+    "RegisterUsableItem": {
+        "prefix": "ESX.RegisterUsableItem",
+        "body": [
+            "ESX.RegisterUsableItem('bread', function(playerId)",
+            "   local xPlayer = ESX.GetPlayerFromId(playerId)",
+            "   xPlayer.removeInventoryItem('bread', 1)",
+            "   xPlayer.showNotification('That was delicious.. right?')",
+            "end)",
+            "-- https://docs.esx-framework.org/legacy/Server/functions/registerusableitem"
+        ]
+    },
+    "SetTimeout": {
+        "prefix": "ESX.SetTimeout",
+        "body": [
+            "local Timeout = ESX.SetTimeout(5000, function()",
+            "   print('xD')",
+            "end)"
+        ]
+    },
+    "Trace": {
+        "prefix": "ESX.Trace",
+        "body": [
+            "ESX.Trace(msg)"
+        ]
+    },
+    "UseItem": {
+        "prefix": "ESX.UseItem",
+        "body": [
+            "ESX.UseItem(PlayerId, itemName)"
+        ]
+    },
+    "addAccountMoney": {
+        "prefix": "xPlayer.addAccountMoney",
+        "body": [
+            "xPlayer.addAccountMoney(account, money)"
+        ]
+    },
+    "addInventoryItem": {
+        "prefix": "xPlayer.addInventoryItem",
+        "body": [
+            "xPlayer.addInventoryItem(item, count)"
+        ]
+    },
+    "addMoney": {
+        "prefix": "xPlayer.addMoney",
+        "body": [
+            "xPlayer.addMoney(money)"
+        ]
+    },
+    "addWeapon": {
+        "prefix": "xPlayer.addWeapon",
+        "body": [
+            "xPlayer.addWeapon(weaponName, ammo)"
+        ]
+    },
+    "addWeaponAmmo": {
+        "prefix": "xPlayer.addWeaponAmmo",
+        "body": [
+            "xPlayer.addWeaponAmmo(weaponName, ammoCount)"
+        ]
+    },
+    "addWeaponComponent": {
+        "prefix": "xPlayer.addWeaponComponent",
+        "body": [
+            "xPlayer.addWeaponComponent(weaponName, weaponComponent)"
+        ]
+    },
+    "canCarryItem": {
+        "prefix": "xPlayer.canCarryItem",
+        "body": [
+            "xPlayer.canCarryItem(item, count)"
+        ]
+    },
+    "canSwapItem": {
+        "prefix": "xPlayer.canSwapItem",
+        "body": [
+            "xPlayer.canSwapItem(firstItem, firstItemCount, testItem, testItemCount)"
+        ]
+    },
+    "getAccount": {
+        "prefix": "xPlayer.getAccount",
+        "body": [
+            "xPlayer.getAccount(account)"
+        ]
+    },
+    "getAccounts": {
+        "prefix": "xPlayer.getAccounts",
+        "body": [
+            "xPlayer.getAccounts()"
+        ]
+    },
+    "getCoords": {
+        "prefix": "xPlayer.getCoords",
+        "body": [
+            "xPlayer.getCoords(useVec)"
+        ]
+    },
+    "getGroup": {
+        "prefix": "xPlayer.getGroup",
+        "body": [
+            "xPlayer.getGroup()"
+        ]
+    },
+    "getIdentifier": {
+        "prefix": "xPlayer.getIdentifier",
+        "body": [
+            "xPlayer.getIdentifier()"
+        ]
+    },
+    "getInventory": {
+        "prefix": "xPlayer.getInventory",
+        "body": [
+            "xPlayer.getInventory(minimal)"
+        ]
+    },
+    "getInventoryItem": {
+        "prefix": "xPlayer.getInventoryItem",
+        "body": [
+            "xPlayer.getInventoryItem(item)"
+        ]
+    },
+    "getJob": {
+        "prefix": "xPlayer.getJob",
+        "body": [
+            "xPlayer.getJob()"
+        ]
+    },
+    "getLoadout": {
+        "prefix": "xPlayer.getLoadout",
+        "body": [
+            "xPlayer.getLoadout()"
+        ]
+    },
+    "getMissingAccounts": {
+        "prefix": "xPlayer.getMissingAccounts",
+        "body": [
+            "xPlayer.getMissingAccounts(cb)"
+        ]
+    },
+    "getMoney": {
+        "prefix": "xPlayer.getMoney",
+        "body": [
+            "xPlayer.getMoney()"
+        ]
+    },
+    "getName": {
+        "prefix": "xPlayer.getName",
+        "body": [
+            "xPlayer.getName()"
+        ]
+    },
+    "getWeapon": {
+        "prefix": "xPlayer.getWeapon",
+        "body": [
+            "xPlayer.getWeapon(weaponName)"
+        ]
+    },
+    "getWeaponTint": {
+        "prefix": "xPlayer.getWeaponTint",
+        "body": [
+            "xPlayer.getWeaponTint(weaponName, weaponTintIndex)"
+        ]
+    },
+    "getWeight": {
+        "prefix": "xPlayer.getWeight",
+        "body": [
+            "xPlayer.getWeight()"
+        ]
+    },
+    "hasItem": {
+        "prefix": "xPlayer.hasItem",
+        "body": [
+            "xPlayer.hasItem(item, metadata)"
+        ]
+    },
+    "hasWeapon": {
+        "prefix": "xPlayer.hasWeapon",
+        "body": [
+            "xPlayer.hasWeapon(weaponName)"
+        ]
+    },
+    "hasWeaponComponent": {
+        "prefix": "xPlayer.hasWeaponComponent",
+        "body": [
+            "xPlayer.hasWeaponComponent(weaponName, weaponComponent)"
+        ]
+    },
+    "kick": {
+        "prefix": "xPlayer.kick",
+        "body": [
+            "xPlayer.kick(reason)"
+        ]
+    },
+    "removeAccountMoney": {
+        "prefix": "xPlayer.removeAccountMoney",
+        "body": [
+            "xPlayer.removeAccountMoney(account, money)"
+        ]
+    },
+    "removeInventoryItem": {
+        "prefix": "xPlayer.removeInventoryItem",
+        "body": [
+            "xPlayer.removeInventoryItem(item, count)"
+        ]
+    },
+    "removeMoney": {
+        "prefix": "xPlayer.removeMoney",
+        "body": [
+            "xPlayer.removeMoney(money)"
+        ]
+    },
+    "removeWeapon": {
+        "prefix": "xPlayer.removeWeapon",
+        "body": [
+            "xPlayer.removeWeapon(weaponName)"
+        ]
+    },
+    "removeWeaponAmmo": {
+        "prefix": "xPlayer.removeWeaponAmmo",
+        "body": [
+            "xPlayer.removeWeaponAmmo(weaponName, ammoCount)"
+        ]
+    },
+    "removeWeaponComponent": {
+        "prefix": "xPlayer.removeWeaponComponent",
+        "body": [
+            "xPlayer.removeWeaponComponent(weaponName, weaponComponent)"
+        ]
+    },
+    "setAccountMoney": {
+        "prefix": "xPlayer.setAccountMoney",
+        "body": [
+            "xPlayer.setAccountMoney(account, money)"
+        ]
+    },
+    "setCoords": {
+        "prefix": "xPlayer.setCoords",
+        "body": [
+            "xPlayer.setCoords(coords)"
+        ]
+    },
+    "setInventoryItem": {
+        "prefix": "xPlayer.setInventoryItem",
+        "body": [
+            "xPlayer.setInventoryItem(item, count)"
+        ],
+    },
+    "setJob": {
+        "prefix": "xPlayer.setJob",
+        "body": [
+            "xPlayer.setJob(name, grade)"
+        ]
+    },
+    "setMaxWeight": {
+        "prefix": "xPlayer.setMaxWeight",
+        "body": [
+            "xPlayer.setMaxWeight(newWeight)"
+        ]
+    },
+    "setMoney": {
+        "prefix": "xPlayer.setMoney",
+        "body": [
+            "xPlayer.setMoney(money)"
+        ]
+    },
+    "setName": {
+        "prefix": "xPlayer.setName",
+        "body": [
+            "xPlayer.setName(newName)"
+        ]
+    },
+    "setWeaponTint": {
+        "prefix": "xPlayer.setWeaponTint",
+        "body": [
+            "xPlayer.setWeaponTint(weaponName, weaponTintIndex)"
+        ]
+    },
+    "showHelpNotification xPlayer": {
+        "prefix": "xPlayer.showHelpNotification",
+        "body": [
+            "xPlayer.showHelpNotification(msg, thisFrame, beep, duration)",
+            "-- https://docs.esx-framework.org/legacy/Server/xplayer/showhelpnotification"
+        ]
+    },
+    "showNotification xPlayer": {
+        "prefix": "xPlayer.showNotification",
+        "body": [
+            "xPlayer.showNotification(msg, flash, saveToBrief, hudColorIndex)",
+            "-- https://docs.esx-framework.org/legacy/Server/xplayer/shownotification"
+        ]
+    },
+    "triggerEvent xPlayer": {
+        "prefix": "xPlayer.triggerEvent",
+        "body": [
+            "xPlayer.triggerEvent(eventName, ...)"
+        ]
+    },
+    "updateCoords": {
+        "prefix": "xPlayer.updateCoords",
+        "body": [
+            "xPlayer.updateCoords(coords)"
         ]
     }
 }
