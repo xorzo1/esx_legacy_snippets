@@ -1,0 +1,33 @@
+{
+    "name": "lua-esx-legacy-snippers",
+    "displayName": "ESX Legacy Snippets",
+    "description": "snippets for FiveM Framework \"esx\"",
+    "version": "1.0.0",
+    "license": "MIT",
+    "icon": "assets/icons/esx.png",
+    "publisher": "xorzo",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "ESX",
+        "Framework",
+        "Snippets",
+        "ESX-snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xorzo1/esx_legacy_snippets.git"
+    }
+}
