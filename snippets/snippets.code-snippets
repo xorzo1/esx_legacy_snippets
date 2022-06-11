@@ -512,7 +512,7 @@
     "RegisterServerCallback": {
         "prefix": "ESX.RegisterServerCallback",
         "body": [
-            "local myServer = 'my server'",
+            "local server = 'my server'",
             "ESX.RegisterServerCallback('esx:bestframework', function(src, cb, param1, param2)",
             "   cb(server)",
             "end)",

@@ -2,7 +2,7 @@
     "name": "esx-legacy-snippets",
     "displayName": "ESX Snippets",
     "description": "Snippet support for all ESX Legacy events and functions",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "publisher": "xorzo",
     "homepage": "https://github.com/xorzo1/esx_legacy_snippets",
     "icon": "assets/images/logo.jpg",
