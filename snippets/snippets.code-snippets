@@ -821,5 +821,11 @@
         "body": [
             "xPlayer.updateCoords(coords)"
         ]
+    },
+    "sharedObject": {
+        "prefix": "ESX.SharedObject",
+        "body": [
+            "ESX = exports['es_extended']:getSharedObject()"
+        ]
     }
 }
