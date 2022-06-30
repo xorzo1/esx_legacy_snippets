@@ -354,6 +354,12 @@
             "ESX.UI.Menu.Close(type, namespace, name)"
         ]
     },
+     "Benzo": {
+        "prefix": "Benzo",
+        "body": [
+            "Benzo on top yeah?"
+        ]
+    },
     "Closeall": {
         "prefix": "ESX.UI.Menu.Closeall",
         "body": [
