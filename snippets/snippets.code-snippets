@@ -827,6 +827,24 @@
         "body": [
             "xPlayer.updateCoords(coords)"
         ]
+    },   
+    "PlayerData": {
+        "prefix": "ESX.PlayerData",
+        "body": [
+            "ESX.PlayerData"
+        ]
+    },
+    "PlayerDataJobName": {
+        "prefix": "ESX.PlayerData.job.name",
+        "body": [
+            "ESX.PlayerData.job.name"
+        ]
+    },
+       "PlayerDataJobGrade": {
+        "prefix": "ESX.PlayerData.job.grade_name",
+        "body": [
+            "ESX.PlayerData.job.grade_name"
+        ]
     },
     "sharedObject": {
         "prefix": "ESX.SharedObject",
