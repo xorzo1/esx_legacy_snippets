@@ -846,6 +846,12 @@
             "ESX.PlayerData.job.grade_name"
         ]
     },
+     "PlayerDataPed": {
+        "prefix": "ESX.PlayerData.ped",
+        "body": [
+            "ESX.PlayerData.ped"
+        ]
+    },
     "sharedObject": {
         "prefix": "ESX.SharedObject",
         "body": [
