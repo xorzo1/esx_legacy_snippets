@@ -770,7 +770,7 @@
         "prefix": "xPlayer.setInventoryItem",
         "body": [
             "xPlayer.setInventoryItem(item, count)"
-        ],
+        ]
     },
     "setJob": {
         "prefix": "xPlayer.setJob",
@@ -844,6 +844,24 @@
         "prefix": "ESX.PlayerData.job.grade_name",
         "body": [
             "ESX.PlayerData.job.grade_name"
+        ]
+    },
+    "ContextMenuOpen": {
+        "prefix": "ESX.OpenContext()",
+        "body": [
+            "ESX.OpenContext()"
+        ]
+    },
+    "ESX.RegisterInput": {
+        "prefix": "ESX.RegisterInput",
+        "body": [
+            "ESX.RegisterInput"
+        ]
+    },
+    "ContextMenuClose": {
+        "prefix": "ESX.CloseContext()",
+        "body": [
+            "ESX.CloseContext()"
         ]
     },
     "sharedObject": {
